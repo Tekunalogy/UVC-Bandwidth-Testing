@@ -2,7 +2,7 @@
 
 # Update packages and Upgrade system
 echo "Updating System.."
-sudo apt-get update -y && sudo apt-get upgrade -y
+sudo apt update -y && sudo apt upgrade -y && sudo apt full-upgrade
 
 # Install cmake, git, libboost and libpcap
 echo "Installing cmake, git, libboost-dev, libpcap-dev, libboost-thread-dev, and libboost-system-dev..."
