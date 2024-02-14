@@ -7,7 +7,7 @@ host_last_segments="2.3"
 port_number="5600"
 
 # Function to display usage information
-# example: ./streamcam.sh -v 1 -h 10.0 -p 5601
+# example: ./streamcam.sh -h 10.0 -p 5601 -v 2
 usage() {
     echo "Usage: $0 [-v <video_int>] [-h <host_last_segments>] [-p <port_number>]" 1>&2
     exit 1
