@@ -16,4 +16,14 @@ sudo apt install -y libglib2.0-dev libgstreamer1.0-dev libgstreamer-plugins-base
 echo "Installing v4l-utils..."
 sudo apt install -y v4l-utils
 
+# Install usbtop
+echo "Installing usbtop"
+git clone https://github.com/aguinet/usbtop.git
+cd usbtop
+mkdir _build && cd _build 
+cmake -DCMAKE_BUILD_TYPE=Release ..
+make
+sudo make install
+
+
 echo "Installation complete."
