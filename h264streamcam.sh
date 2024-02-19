@@ -37,4 +37,5 @@ host="$host_prefix$host_last_segments"
 
 # Execute the command with provided configurations
 uname -r
+# GST_DEBUG=v4l*:5 gst-launch-1.0 v4l2src device=/dev/video$video_int ! video/x-h264, width=1920, height=1080 ! h264parse ! queue ! rtph264pay config-interval=10 pt=96 ! udpsink host=$host port=$port_number sync=false
 gst-launch-1.0 v4l2src device=/dev/video$video_int ! video/x-h264, width=1920, height=1080 ! h264parse ! queue ! rtph264pay config-interval=10 pt=96 ! udpsink host=$host port=$port_number sync=false
