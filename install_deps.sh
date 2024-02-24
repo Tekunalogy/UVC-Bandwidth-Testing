@@ -1,7 +1,11 @@
 #!/bin/bash
 
+echo "Updating USBFS_MEMORY_FS Parameter.."
+sudo sh -c 'echo 1000 > /sys/module/usbcore/parameters/usbfs_memory_mb'
+sudo cat /sys/module/usbcore/parameters/usbfs_memory_mb
+
 # Update packages and Upgrade system
-echo "Updating System.."
+echo "Updating System..."
 sudo apt update -y && sudo apt upgrade -y && sudo apt full-upgrade
 
 # Install cmake, git, libboost and libpcap
@@ -18,7 +22,7 @@ echo "Installing v4l-utils..."
 sudo apt install -y v4l-utils
 
 # Install usbtop
-echo "Installing usbtop"
+echo "Installing usbtop..."
 git clone https://github.com/aguinet/usbtop.git
 cd usbtop
 mkdir _build && cd _build 
@@ -27,4 +31,4 @@ make
 sudo make install
 
 
-echo "Installation complete."
+echo "Installation complete!"
