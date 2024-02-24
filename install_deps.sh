@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# https://www.flir.com/support-center/iis/machine-vision/application-note/understanding-usbfs-on-linux/
 echo "Updating USBFS_MEMORY_FS Parameter.."
 sudo sh -c 'echo 1000 > /sys/module/usbcore/parameters/usbfs_memory_mb'
 sudo cat /sys/module/usbcore/parameters/usbfs_memory_mb
